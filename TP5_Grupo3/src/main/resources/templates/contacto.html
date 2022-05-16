@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Contacto</title>
+		<link rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}">
+		<link rel="stylesheet" th:href="@{/css/style.css}">
+	</head>
+	<body>
+		<header th:replace="/layouts/header:: header"></header>
+		<div class="container form-container">
+		<div class="w-100 text-center">		
+			<h3>Contactanos</h3>
+		</div>
+			<form action="#" method="post" class="form-border">
+			
+					<label for="name">Nombre y Apellido:</label> 
+					<input type="text" class="form-control" id="name" name="user_name"><br><br>
+					<label for="provincia">Provincia:</label> 
+					<select class="form-control" name="provincia" id="provincia">
+					  <option value="jujuy" selected>Jujuy</option>
+					  <option value="salta">Salta</option>
+					  <option value="tucuman">Tucumán</option>
+					  <option value="larioja">La Rioja</option>
+					  <option value="catamarca">Catamarca</option>
+					</select><br><br>
+					<label for="telefono">Teléfono</label> 
+					<input type="text" class="form-control" id="telefono" name="telefono" required="required"><br><br>
+					<label for="email">Correo electrónico:</label> 
+					<input type="email" class="form-control" id="email" name="email"><br><br>
+					
+					<label>Estado Civil</label><br>
+					<input type="radio" name="estadocivil" value="casado">Casado<br>
+				    <input type="radio" name="estadocivil" value="soltero">Soltero<br>
+				    <input type="radio" name="estadocivil" value="otro">Otro<br><br>
+				    <label for="message">Mensaje:</label> 
+					<textarea class="form-control" id="message" name="message"></textarea><br><br>
+	  				<p><input type="submit" class="form-control btn-warning" value="Enviar datos"></p>				
+			</form>
+		</div>
+		<footer th:replace="/layouts/footer :: footer"></footer>
+
+</body>
+</html>
